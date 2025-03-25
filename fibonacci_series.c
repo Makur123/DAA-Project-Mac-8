@@ -4,7 +4,6 @@ static int operations = 0;
 
 void printFib(int n) {
     if (n < 1) {  
-        operations++; 
         printf("Invalid Number of terms\n");
         operations++; 
         return;
@@ -23,14 +22,11 @@ void printFib(int n) {
     }
 
     printf("%d ", prev1);
-    operations++; 
     for (int i = 3; i <= n; i++) {
-        operations++; 
-
+        
         int curr = prev1 + prev2;
         prev2 = prev1;
         prev1 = curr;
-        operations += 3;
 
         printf("%d ", curr);
         operations++; 
